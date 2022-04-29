@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Control_panel from './components/control_panel'
+import View_panel from './components/view_panel'
+import Work_area from './components/work_area'
+import Information from './components/information_button'
+
+const f = [
+  { name: 'puta.txt' },
+  { name: 'index.html' },
+  { name: 'kk.git' }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <div id='principal'>
+        <Control_panel />
+        <View_panel files={f} />
+        <Work_area />
+      </div>
+      <Information />
+    </main>
+  )
 }
 
 export default App;

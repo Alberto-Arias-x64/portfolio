@@ -1,0 +1,18 @@
+{
+    "html":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/html.svg",
+    "css":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/css.svg",
+    "js":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/javascript.svg",
+    "git":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/git.svg",
+    "py":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/python.svg",
+    "react":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/react.svg",
+    "django":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/django.svg",
+    "file":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/file.svg",
+    "3d":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/3d.svg",
+    "email":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/email.svg",
+    "imagen":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/image.svg",
+    "jest":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/jest.svg",
+    "redux":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/redux-action.svg",
+    "test":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/test-js.svg",
+    "typescript":"https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/typescript.svg",
+    "wakatime":"https://github.com/PKief/vscode-material-icon-theme/blob/main/icons/wakatime.svg"
+}
