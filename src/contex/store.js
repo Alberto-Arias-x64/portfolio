@@ -1,23 +1,31 @@
 import { createContext, useReducer } from "react"
 
-const Context = createContext()
 
-const initial_state = { active_item: '' }
+const initial_state = { selected_item: '' }
 const reducer = (state, action) => {
-    switch (action.type) {
-        case '@item/init_item':
-            return{...state}
-    
+    const{type, payload} = action
+    switch (type) {
+        case '@item/set_item':
+            return { ...state , selected_item:payload}
+
         default:
-            return{...state}
+            return state
     }
 }
 
-export const Store = ({ children }) => {
+export const Context = createContext()
 
+export const Store = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initial_state)
+
+    const set_item = (id) =>{
+        dispatch({
+            type:'@item/set_item',
+            payload:id
+        })
+    }
     return (
-        <Context.Provider value={{ state, dispatch }}>
+        <Context.Provider value={{ state, set_item }}>
             {children}
         </Context.Provider>
     )

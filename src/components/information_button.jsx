@@ -11,7 +11,7 @@ const Information = () => {
                 <p>Espacios:4</p>
                 <p>UTF-8</p>
                 <p>CRLF</p>
-                <p>{} JavaScipt React</p>
+                <p>{`{}`} JavaScipt React</p>
                 <p>Go Live</p>
             </div>
         </div>
