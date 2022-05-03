@@ -2,31 +2,34 @@ import { useContext, useState } from "react"
 import { file_extencion } from "../helpers/icons"
 import { Context } from "../contex/store"
 
-const Work_area = ({ files }) => {
 
-    const { state, set_item } = useContext(Context)
-    const { selected_item } = state
+const Work_area = () => {
 
-    const [hide, set_hide] = useState(undefined)
+    const { state, active_item, hide_item } = useContext(Context)
 
     const handle_active = ({ target }) => {
-        set_item(target.dataset.id)
+        if(target.dataset.hide_name === undefined) active_item(target.dataset.name)
     }
-    const handle_hide = ({ target }) => {
-        set_hide(target.dataset.id)
-        set_item(undefined)
+    const handle_hide = ({ target }) =>{
+        hide_item(target.dataset.hide_name)
     }
-    const handle_class = (element) => {
-        if (hide === element) return 'hide_element'
-        if (selected_item === element) return 'active_window'
-    }
-    function print_files(file = []) {
+
+    function Print_files({ file }) {
         return file.map(element => {
             return (
-                <div key={element.name} data-id={element.name} className={handle_class(element.name)} onClick={handle_active} >
-                    <img data-id={element.name} src={file_extencion(element.name)} alt="" className="folder_icon" />
-                    <p data-id={element.name}>{element.name}</p>
-                    <button data-id={element.name} className="windows_button" onClick={handle_hide}>X</button>
+                <div key={element.name} className={element.is_hide === true ? 'hide_element' : null} onClick={handle_active} >
+                    <img data-name={element.name} src={file_extencion(element.name)} alt="" className="folder_icon" />
+                    <p data-name={element.name}>{element.name}</p>
+                    <button data-hide_name={element.name} className="windows_button" onClick={handle_hide}>X</button>
+                </div>
+            )
+        })
+    }
+    const Print_data_files = ({file}) =>{
+        return file.map(element => {
+            if(element.is_active === true) return(
+                <div>
+                    {element.name}
                 </div>
             )
         })
@@ -34,9 +37,11 @@ const Work_area = ({ files }) => {
     return (
         <div id="work">
             <div id="windows">
-                {print_files(files)}
+                <Print_files file={state} />
             </div>
-            <div id="work_area"></div>
+            <div id="work_area">
+                <Print_data_files file={state}/>
+            </div>
         </div>
     )
 }
