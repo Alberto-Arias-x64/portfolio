@@ -9,6 +9,9 @@
   --icon_1: #787878;
   --icon_2: #f0f0f0; /* active icon */
   --text_1: #b4b4b5;
+  --text_2: #569CD6;
+  --text_3: #6A9955;
+  --numbers: #6B6B6B;
 }
 
 * {
@@ -19,7 +22,17 @@
 body {
   font-family: 'Raleway', sans-serif;
   color: var(--text_1);
-  font-size: 80%;
+  font-size: 82%;
+}
+h1{
+  font-size: 50px;
+}
+h2{
+  font-size: 40px;
+  color: var(--text_2);
+}
+h3{
+  font-size: 40px;
 }
 ul {
   list-style: none;
@@ -31,6 +44,7 @@ ul {
   display: none !important;
 }
 
+
 /* desktop */
 main {
   width: 100vw;
@@ -41,8 +55,10 @@ main {
 }
 #principal {
   display: grid;
-  grid-template-columns: 50px 150px auto;
+  grid-template-columns: 50px 180px auto;
+  height: calc(100vh - 20px);
 }
+
 
 #control {
   width: 100%;
@@ -67,6 +83,7 @@ main {
   stroke: var(--icon_2);
 }
 
+
 #view {
   width: 100%;
   height: 100%;
@@ -75,6 +92,7 @@ main {
 #view_top {
   padding: 10px;
 }
+
 
 .folder_title {
   margin-left: 5px;
@@ -143,8 +161,29 @@ main {
   background-color: var(--gray_2_2);
 }
 #work_area{
+  display: grid;
+  grid-template-columns: 60px auto;
   background-color: var(--gray_3);
 }
+#numbers{
+  height: 100%;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  color: var(--numbers);
+  gap: 2px;
+
+  border-right: solid 1px var(--numbers);
+}
+#contend{
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+}
+
 
 #information_button {
   display: grid;
@@ -163,4 +202,69 @@ main {
 #information_rigt{
   display: flex;
   justify-content: flex-end;
+}
+
+/* raw data */
+
+#intro{
+  width: 100%;
+  height: 100%;
+  padding: 10px 5px;
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+}
+#intro_contend{
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: start;
+  gap: 100px;
+}
+#intro_data{
+  max-width: 700px;
+  margin-left:100px ;
+  position: relative;
+  z-index: 1;
+}
+#matrix_placeholder{
+  margin-left: 300px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.2;
+  height: 80%;
+}
+#matrix{
+  width: 100%;
+  height: 100%;
+}
+
+
+#about_contend{
+  font-size: 1rem;
+}
+#about_data{
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto auto;
+  margin: 0 200px;
+  gap: 20px;
+}
+#about_data > img{
+  max-width: 300px;
+  border-radius: 10px;
+}
+#about_data_contend{
+  height: 100%;
+  max-width: 600px;
+}
+#skills > *{
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+
+  color: var(--text_3);
+  background-color: var(--icon_2);
+  font-weight: 800;
 }

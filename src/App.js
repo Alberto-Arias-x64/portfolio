@@ -7,19 +7,33 @@ import View_panel from './components/explorer_panel'
 import Work_area from './components/work_area'
 import Information from './components/information_button'
 
+import Data from './components/raw_data'
+import About from './components/raw_data/about'
+
 const f = [
-  { name: 'puta.txt' },
-  { name: 'index.html' },
-  { name: 'kk.git' },
-  { name: 'el_demonio_del_sabor.py' },
-  { name: 'App.js' }
+  {
+    name: 'Intro.html',
+    data: <Data/>
+  },
+  {
+    name: 'About.js',
+    data: <About/>
+  },
+  {
+    name: 'Proyects.git',
+    data: false
+  },
+  {
+    name: 'Galery.py',
+    data: false
+  }
 ]
 
 function App() {
   const { add_item } = useContext(Context)
   useEffect(() => {
     f.map(element => {
-      add_item(element.name)
+      add_item(element)
     })
   }, [])
 

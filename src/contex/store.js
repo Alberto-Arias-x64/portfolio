@@ -61,36 +61,32 @@ export const Context = createContext()
 export const Store = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initial_state)
 
-    const add_item = (name) => {
+    const add_item = (data) => {
         dispatch({
             type: '@item/add_item',
             payload: {
-                name,
-                contend: false,
+                ...data,
                 is_active: false,
                 is_hide: false,
             }
         })
     }
 
-    const active_item = (name) => {
+    const active_item = (data) => {
         dispatch({
             type: '@item/active_item',
             payload: {
-                name,
-                contend: false,
+                ...data,
                 is_active: true,
                 is_hide: false,
             }
         })
     }
-    const hide_item = (name) => {
-        console.log(name)
+    const hide_item = (data) => {
         dispatch({
             type: '@item/hide_item',
             payload: {
-                name,
-                contend: false,
+                ...data,
                 is_active: false,
                 is_hide: true,
             }

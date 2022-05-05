@@ -5,14 +5,14 @@ import { Context } from "../contex/store"
 const View_panel = () => {
     const {state,active_item} = useContext(Context)
     
-    const handle_active = ({target}) => {
-        active_item(target.dataset.name)
+    const handle_active = (target,element) => {
+        active_item(element)
     }
 
     function print_files(file = []) {
         return file.map(element => {
             return (
-                <li key={element.name} data-name={element.name} className={element.is_active === true ? 'active_item' : null} onClick={handle_active} >
+                <li key={element.name} data-name={element.name} className={element.is_active === true ? 'active_item' : null} onClick={({target}) => handle_active(target,element)} >
                     <img data-name={element.name} src={file_extencion(element.name)} alt="" className="folder_icon" />
                     <p data-name={element.name}>{element.name}</p>
                 </li>
