@@ -15,7 +15,7 @@ const reducer = (state, action) => {
         case '@item/add_item':
             let flag = false
             state.forEach(element => {
-                if (element.name == payload.name) flag = true
+                if (element.name === payload.name) flag = true
             })
             if (flag === true) return [...state]
             return [...state, payload]

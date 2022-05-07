@@ -48,7 +48,7 @@ const Data = () => {
     }, []);
     return (
         <section id="intro">
-            <h2>{'<Title>'}</h2>
+            <div className='f_row'><h2 className='simbol'>{'<'}</h2><h2>Title</h2><h2 className='simbol'>{'>'}</h2></div>
             <div id='intro_contend'>
                 <div id='intro_data'>
                     <h1>HI, I’m Nicolas Arias | Web developer</h1>
@@ -58,7 +58,7 @@ const Data = () => {
                     <canvas id="matrix"></canvas>
                 </div>
             </div>
-            <h2>{'</Title>'}</h2>
+            <div className='f_row'><h2 className='simbol'>{'</'}</h2><h2>Title</h2><h2 className='simbol'>{'>'}</h2></div>
         </section>
     )
 }

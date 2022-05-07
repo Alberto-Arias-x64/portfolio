@@ -9,6 +9,7 @@ import Information from './components/information_button'
 
 import Data from './components/raw_data'
 import About from './components/raw_data/about'
+import Projects from './components/raw_data/proyects'
 
 const f = [
   {
@@ -20,8 +21,8 @@ const f = [
     data: <About/>
   },
   {
-    name: 'Proyects.git',
-    data: false
+    name: 'Projects.git',
+    data: <Projects/>
   },
   {
     name: 'Galery.py',

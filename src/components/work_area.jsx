@@ -16,7 +16,7 @@ const Work_area = () => {
     function Print_files({ file }) {
         return file.map(element => {
             return (
-                <div key={element.name} className={element.is_hide === true ? 'hide_element' : null} onClick={({ target }) => handle_active(target, element)} >
+                <div key={'XD'+element.name} className={element.is_hide === true ? 'hide_element' : null} onClick={({ target }) => handle_active(target, element)} >
                     <img data-name={element.name} src={file_extencion(element.name)} alt="" className="folder_icon" />
                     <p data-name={element.name}>{element.name}</p>
                     <button data-hide_name={element.name} className="windows_button" onClick={({ target }) => handle_hide(target, element)}>X</button>
@@ -34,7 +34,7 @@ const Work_area = () => {
     const Print_data_files = ({ file }) => {
         return file.map(element => {
             if (element.is_active === true) return (
-                <div id="contend">{element.data}</div>
+                <div key={'HC'+element} id="contend">{element.data}</div>
             )
         })
     }

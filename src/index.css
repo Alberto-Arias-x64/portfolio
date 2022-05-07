@@ -6,12 +6,24 @@
   --gray_2_2: #37373d;  /* active item */
   --gray_3: #1e1e1e;  /* work site */
   --gray_3_1: #2d2d2d;  /* unselected window */
+
   --icon_1: #787878;
   --icon_2: #f0f0f0; /* active icon */
-  --text_1: #b4b4b5;
-  --text_2: #569CD6;
-  --text_3: #6A9955;
+
+  --text_1: #b4b4b5; /* defaul color */
+  --text_2: #569CD6; /* funtion */
+  --text_3: #569CD6; /* variable */
+  --text_4: #6A9955; /* comments */
+  --text_5: #9CDCFE; /* value */
+  --text_6: #DCDCAA; /* function name */
+  --text_7: #C586C0; /* default functions */
   --numbers: #6B6B6B;
+
+  --tecno_1:#F1E05A;
+  --tecno_2:#563D7C;
+  --tecno_3:#178600;
+  --tecno_4:#3572A5;
+  --tecno_5:#E34C26;
 }
 
 * {
@@ -30,6 +42,7 @@ h1{
 h2{
   font-size: 40px;
   color: var(--text_2);
+  white-space: pre-wrap;
 }
 h3{
   font-size: 40px;
@@ -37,11 +50,27 @@ h3{
 ul {
   list-style: none;
 }
+.hide_element{
+  display: none !important;
+}
+.f_row{
+  display: flex;
+  flex-direction: row;
+}
 .bold {
   font-weight: bold;
 }
-.hide_element{
-  display: none !important;
+.simbol{
+  color: var(--numbers);
+}
+.var{
+  color: var(--text_5);
+}
+.function{
+  color: var(--text_6);
+}
+.d_function{
+  color: var(--text_7);
 }
 
 
@@ -55,7 +84,7 @@ main {
 }
 #principal {
   display: grid;
-  grid-template-columns: 50px 180px auto;
+  grid-template-columns: 50px 150px auto;
   height: calc(100vh - 20px);
 }
 
@@ -221,15 +250,17 @@ main {
   align-items: center;
   justify-content: start;
   gap: 100px;
+
+  position: relative;
 }
 #intro_data{
   max-width: 700px;
   margin-left:100px ;
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 #matrix_placeholder{
-  margin-left: 300px;
+  margin-left: 100px;
   position: absolute;
   z-index: 0;
   opacity: 0.2;
@@ -264,7 +295,59 @@ main {
   margin: 5px;
   padding: 10px;
 
-  color: var(--text_3);
+  color: var(--text_4);
   background-color: var(--icon_2);
   font-weight: 800;
+}
+
+
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 30px;
+
+  border-radius: 5px;
+  background-color: var(--gray_1);
+  gap: 10px;
+}
+.card_title{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--blue_1);
+}
+.card_contend{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+.card_tecnologis, .card_description, .card_data{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--gray_3);
+}
+.card_tecnologis{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.card_pj_img{
+  width: 100px;
+}
+.card_tecnologis > ul > li{
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+
+  margin: 5px;
+  gap: 10px;
+}
+.tecno{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--tecno_1);
+}
+.tecno_persent{
+  color: var(--numbers);
 }

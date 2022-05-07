@@ -1,9 +1,9 @@
 import imagen from '../../svg/imagen.jpeg'
 
-const About = () => {
+const About = ({nepe}) => {
     return (
         <section id="about">
-            <h2>{'funtion Descrive (info) {'}</h2>
+            <div className='f_row'><h2>Function </h2><h2 className='function'>Descrive </h2><h2 className="simbol">{'({'}</h2><h2 className="var">info</h2><h2 className='simbol'>{'}){'}</h2></div>
             <div id='about_contend'>
                 <h3>My skills</h3>
                 <div id='about_data'>
@@ -37,8 +37,8 @@ const About = () => {
                 </div>
             </div>
             <div>
-                <h2>{'}'}</h2>
-                <h2>{'export default Descrive'}</h2>
+                <h2 className='simbol'>{'}'}</h2>
+                <div className='f_row'><h2 className='d_function'>Export default </h2><h2 className='function'>Descrive</h2></div>
             </div>
         </section>
     )
