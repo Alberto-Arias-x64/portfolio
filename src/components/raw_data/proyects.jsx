@@ -1,57 +1,47 @@
-import img_pj1 from './project1.svg'
+import img_pj1 from './expample_1.jpg'
 const data = [
     {
         name: 'Portfolio V3',
-        img: img_pj1,
-        tecnologis: [{
-            tec:'jsx',
-            percent:'60%'
-        },{
-            tec:'js',
-            percent:'7%'
-        },{
-            tec:'css',
-            percent:'22%'
-        },{
-            tec:'html',
-            percent:'11%'
-        }],
+        graph: img_pj1,
+        tecnologis: ['Jsx', 'Js', 'Css', 'Html'],
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, mollitia dolores cupiditate aliquam fugit voluptatum. Vero sequi, reprehenderit exercitationem neque assumenda sit aspernatur repellat, incidunt, error blanditiis magnam doloremque vitae.',
         data: {
             develop_time: '15 Days',
             contribuidors: 1,
             project_status: 'Online'
-        }
+        },
     }
 ]
-
 const Card = ({ data }) => {
+    function tecno(params) {
+        return params.map(element => <p>{element}</p>)
+    }
     return (
         <div className="card">
-            <div className="card_title"><h3>{data.name}</h3></div>
+            <div className='card_up'>
+                <div className="card_title"><h4>{data.name}</h4></div>
+                <button>See Now</button>
+            </div>
             <div className="card_contend">
-                <div className="card_tecnologis">
-                    <img className='card_pj_img' src={data.img} alt="" />
-                    <ul>
-                        <li><div className="tecno" /><p>{data.tecnologis[0].tec}</p><p className='tecno_persent'>{data.tecnologis[0].percent}</p></li>
-                        <li><div className="tecno" /><p>{data.tecnologis[1].tec}</p><p className='tecno_persent'>{data.tecnologis[1].percent}</p></li>
-                        <li><div className="tecno" /><p>{data.tecnologis[2].tec}</p><p className='tecno_persent'>{data.tecnologis[2].percent}</p></li>
-                        <li><div className="tecno" /><p>{data.tecnologis[3].tec}</p><p className='tecno_persent'>{data.tecnologis[3].percent}</p></li>
-                    </ul>
+                <img className='card_img' src={data.graph} alt="" />
+                <div className="card_description">
+                    {data.description}
+                    <div id="skills">
+                        {tecno(data.tecnologis)}
+                    </div>
                 </div>
-                <div className="card_description">{data.description}</div>
                 <div className="card_data">
-                    <div>
-                        <p>{data.data.develop_time}</p>
-                        <p>Develop Time</p>
+                    <div className='card_data'>
+                        <p className='card_data_higth'>{data.data.develop_time}</p>
+                        <p className='commentary'>Develop Time</p>
                     </div>
-                    <div>
-                        <p>{data.data.contribuidors}</p>
-                        <p>Contribuidors</p>
+                    <div className='card_data'>
+                        <p className='card_data_higth'>{data.data.contribuidors}</p>
+                        <p className='commentary'>Contribuidors</p>
                     </div>
-                    <div>
-                        <p>{data.data.project_status}</p>
-                        <p>Project Status</p>
+                    <div className='card_data'>
+                        <p className='card_data_higth'>{data.data.project_status}</p>
+                        <p className='commentary'>Project Status</p>
                     </div>
                 </div>
             </div>
@@ -62,8 +52,8 @@ const Card = ({ data }) => {
 const Projects = () => {
     return (
         <section id="projects">
-            <h2>{'class Projects:'}</h2>
-            <h2>{'  def __init__(self,project)'}</h2>
+            <div className='f_row'><h2>Class </h2><h2 className='function'>Projects</h2><h2 className="simbol">{':'}</h2></div>
+            <h2>{'      def __init__(self,project)'}</h2>
             <div id='intro_contend'>
                 <Card data={data[0]} />
             </div>

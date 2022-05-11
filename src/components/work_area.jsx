@@ -42,7 +42,7 @@ const Work_area = () => {
     useEffect(() => {
         try {
             const side_numbers = document.documentElement.clientHeight
-            const num_rows = (side_numbers-55)/ 17
+            const num_rows = (side_numbers-55)/ 20
             set_dimensions(num_rows)
         } catch (error) {}
     }, [state,document.documentElement.clientHeight]);

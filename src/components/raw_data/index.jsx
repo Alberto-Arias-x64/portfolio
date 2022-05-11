@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import simio from './Group_4.png'
 
 const matrix = () => {
     const canvas = document.getElementById('matrix')
@@ -51,8 +52,11 @@ const Data = () => {
             <div className='f_row'><h2 className='simbol'>{'<'}</h2><h2>Title</h2><h2 className='simbol'>{'>'}</h2></div>
             <div id='intro_contend'>
                 <div id='intro_data'>
-                    <h1>HI, I’m Nicolas Arias | Web developer</h1>
-                    <p>I like explore new tecnologies  ‍💻 I´m livelong learner ‍🎓 and lover of music, art and designe 🎨</p>
+                    <div>
+                        <h1>HI, I’m Nicolas Arias | Web developer</h1>
+                        <p>I like explore new tecnologies  ‍💻 I´m livelong learner ‍🎓 and lover of music, art and designe 🎨</p>
+                    </div>
+                    <img src={simio} alt="" />
                 </div>
                 <div id='matrix_placeholder'>
                     <canvas id="matrix"></canvas>

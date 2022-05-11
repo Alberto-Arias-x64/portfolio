@@ -1,6 +1,6 @@
 import imagen from '../../svg/imagen.jpeg'
 
-const About = ({nepe}) => {
+const About = () => {
     return (
         <section id="about">
             <div className='f_row'><h2>Function </h2><h2 className='function'>Descrive </h2><h2 className="simbol">{'({'}</h2><h2 className="var">info</h2><h2 className='simbol'>{'}){'}</h2></div>
@@ -25,14 +25,16 @@ const About = ({nepe}) => {
                             <p>Fusion 360</p>
 
                         </div>
-                        <h4>Algo relevante</h4>
-                        <p>
-                            Desde pequeño me desarmava todo lo que tenia electonica, cuando cumpli 16 años compre mi primer computador,
-                            con este aprendi a diseñar mis primeos modelos en 3d y despues me permitio emprezar en el mundo de la programacion,
-                            esta expreriencia me impulso a estudiar ingenieria en automatizacion industrial.
-                            gracais a la pandemia me he enfocado en el desarrollo de software para la web,
-                            estudiando por mi cuenta y realizano proyectos y aprendiendo dia a dia.
-                        </p>
+                        <div>
+                            <h4>Una pincelada de mi 🖌️</h4>
+                            <p>
+                                Desde pequeño me desarmava todo lo que tenia electonica, cuando cumpli 16 años compre mi primer computador,
+                                con este aprendi a diseñar mis primeos modelos en 3d y despues me permitio emprezar en el mundo de la programacion,
+                                esta expreriencia me impulso a estudiar ingenieria en automatizacion industrial.
+                                gracais a la pandemia me he enfocado en el desarrollo de software para la web,
+                                estudiando por mi cuenta y realizano proyectos y aprendiendo dia a dia.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
