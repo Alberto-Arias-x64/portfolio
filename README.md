@@ -1,70 +1,66 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My portfolio V3
 
-## Available Scripts
+Welcome to my portfolio, this is a project to show who I am and what knowledge I am acquiring over time, this includes my experience, personal projects, something about me, and a little gratitude to all my mentors along to my technological career.
 
-In the project directory, you can run:
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Client:** React , Html , Css , Js , Jsx
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Roadmap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Additional browser support
 
-### `npm run build`
+- Add more projects to display
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Improve presentation on mobile devices
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Color Reference
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Principal Color | ![#3f3e47](https://via.placeholder.com/10/3f3e47?text=+) #3f3e47 |
+| Secondary Color | ![#faf9f9](https://via.placeholder.com/10/faf9f9?text=+) #faf9f9 |
+| Titanium | ![#545b62](https://via.placeholder.com/10/545b62?text=+) #545b62 |
+| Bronce | ![#554a3c](https://via.placeholder.com/10/554a3c?text=+) #554a3c |
+| Tungsten | ![#9f9586](https://via.placeholder.com/10/9f9586?text=+) #9f9586 |
+| Gunmetal | ![#b76e79](https://via.placeholder.com/10/b76e79?text=+) #b76e79 |
+| Cold Steel | ![#262335](https://via.placeholder.com/10/262335?text=+) #262335 |
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Lessons Learned
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project has increased my mockup and responsive design skills, puse en practice my knowleng in react
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Run Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clone the project
 
-## Learn More
+```bash
+  git clone https://link-to-project
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Go to the project directory
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  cd my-project
+```
 
-### Code Splitting
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  npm install
+```
 
-### Analyzing the Bundle Size
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  npm run start
+```
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Screenshots
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![App Screenshot](http://drive.google.com/uc?export=view&id=1x08wbEOS8dlwyw4xF31qmjDEW5IVSeV4)
