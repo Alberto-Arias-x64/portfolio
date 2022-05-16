@@ -26,13 +26,13 @@ const About = () => {
 
                         </div>
                         <div>
-                            <h4>Una pincelada de mi 🖌️</h4>
+                            <h4>A touch of my 🖌️</h4>
                             <p>
-                                Desde pequeño me desarmava todo lo que tenia electonica, cuando cumpli 16 años compre mi primer computador,
-                                con este aprendi a diseñar mis primeos modelos en 3d y despues me permitio emprezar en el mundo de la programacion,
-                                esta expreriencia me impulso a estudiar ingenieria en automatizacion industrial.
-                                gracais a la pandemia me he enfocado en el desarrollo de software para la web,
-                                estudiando por mi cuenta y realizano proyectos y aprendiendo dia a dia.
+                                Since I was a child I disassembled everything that had electronics, when I turned 16 years old I bought my first computer,
+                                with this computer I learned to design my first 3d models and then it allowed me to start in the world of programming,
+                                this experience pushed me to study engineering in industrial automation.
+                                thanks to the pandemic I have focused on software development for the web,
+                                studying on my own and doing projects and learning day by day.
                             </p>
                         </div>
                     </div>

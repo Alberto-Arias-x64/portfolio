@@ -6,6 +6,7 @@
   --gray_2_2: #37373d;  /* active item */
   --gray_3: #1e1e1e;  /* work site */
   --gray_3_1: #2d2d2d;  /* unselected window */
+  --purple_1: #68217A;
 
   --icon_1: #787878;
   --icon_2: #f0f0f0; /* active icon */
@@ -18,12 +19,6 @@
   --text_6: #DCDCAA; /* function name */
   --text_7: #C586C0; /* default functions */
   --numbers: #6B6B6B;
-
-  --tecno_1:#F1E05A;
-  --tecno_2:#563D7C;
-  --tecno_3:#178600;
-  --tecno_4:#3572A5;
-  --tecno_5:#E34C26;
 }
 
 * {
@@ -37,20 +32,21 @@ body {
   font-size: 82%;
 }
 h1{
-  font-size: 50px;
+  font-size: 48px;
 }
 h2{
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 200;
   color: var(--text_2);
   white-space: pre-wrap;
 }
 h3{
-  font-size: 40px;
+  font-size: 38px;
 }
 h4{
   font-size: 1.5rem;
-  color: var(--text_5);
+  font-weight: 500;
+  color: var(--icon_2);
 }
 ul {
   list-style: none;
@@ -103,6 +99,7 @@ main {
 
   display: grid;
   grid-template-rows: auto 20px;
+  overflow-x: hidden;
 }
 #principal {
   display: grid;
@@ -212,6 +209,7 @@ main {
   background-color: var(--gray_2_2);
 }
 #work_area{
+  height: 100%;
   display: grid;
   grid-template-columns: 60px auto;
   background-color: var(--gray_3);
@@ -345,6 +343,21 @@ main {
 }
 
 
+#projects{
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+}
+#intro_contend_2{
+  height: calc(100vh - 18px - 30px - 52px - 52px);
+  display: grid;
+  grid-auto-columns: auto;
+  justify-content: center;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+
 .card{
   max-width: 950px;
   display: flex;
@@ -361,10 +374,21 @@ main {
   grid-template-columns: auto max-content;
   gap: 10px;
 }
+.card_up > button{
+  font-size: 1.2rem;
+  padding: 0 50px;
+}
+.card_up > button:hover{
+  cursor: pointer;
+  background-color: var(--blue_1);
+  color: var(--gray_1);
+  border-color: var(--gray_1) ;
+  transition: 200ms ease-in-out;
+}
 .card_title{
   padding: 5px;
   border-radius: 5px;
-  background-color: var(--blue_1);
+  background-color: var(--purple_1);
 }
 .card_contend{
   display: grid;
