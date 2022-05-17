@@ -53,8 +53,8 @@ const Data = () => {
             <div id='intro_contend'>
                 <div id='intro_data'>
                     <div>
-                        <h1>HI, I’m Nicolas Arias | Web developer</h1>
-                        <p>I like explore new tecnologies  ‍💻 I´m livelong learner ‍🎓 and lover of music, art and designe 🎨</p>
+                        <h1>HI, I’m Alberto Arias | Web developer</h1>
+                        <p className='up'>I like explore new tecnologies  ‍💻 I´m livelong learner ‍🎓 and lover of music, art and designe 🎨</p>
                     </div>
                     <img src={simio} alt="" />
                 </div>

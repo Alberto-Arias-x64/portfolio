@@ -103,7 +103,7 @@ const Card = (data) => {
     }
     const handle_click = (event) =>{
         //console.log(event.target.dataset.link)
-        redir(event.target.dataset.link)
+        set_click(event.target.dataset.link)
     }
     useEffect(() => {
         redir(click)
