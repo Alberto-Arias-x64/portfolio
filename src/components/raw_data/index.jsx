@@ -49,7 +49,7 @@ const write_machine = (text, target) => {
         target.innerHTML += array[count]
         count++
         if (count === array.length) clearInterval(inter)
-    }, 100)
+    }, 80)
 }
 
 const Data = () => {

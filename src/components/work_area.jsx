@@ -1,17 +1,19 @@
-import { useState, useEffect } from "react"
-import { file_extencion } from "../helpers/icons"
+import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+
+import { active_app, hide_app } from '../contex/central_store'
+import { file_extencion } from '../helpers/icons'
 
 const Work_area = () => {
 
-    const { state, active_item, hide_item } = useSelector((state) => state)
+    const { apps } = useSelector((state) => state)
     const dispatch = useDispatch()
 
     const handle_active = (target, element) => {
-        if (target.dataset.hide_name === undefined) active_item(element)
+        if (target.dataset.hide_name === undefined) dispatch(active_app(element))
     }
     const handle_hide = (target, element) => {
-        hide_item(element)
+        dispatch(hide_app(element))
     }
 
     function Print_files({ file }) {
@@ -39,23 +41,23 @@ const Work_area = () => {
             )
         })
     }
-    const [dimensions,set_dimensions] = useState(0)
+    const [dimensions, set_dimensions] = useState(0)
     useEffect(() => {
         try {
             const side_numbers = document.documentElement.clientHeight
-            const num_rows = (side_numbers-55)/ 20
+            const num_rows = (side_numbers - 55) / 20
             set_dimensions(num_rows)
-        } catch (error) {}
-    }, [state,document.documentElement.clientHeight]);
+        } catch (error) { }
+    }, [apps, document.documentElement.clientHeight]);
 
     return (
         <div id="work">
             <div id="windows">
-                {/* <Print_files file={state} /> */}
+                <Print_files file={apps} />
             </div>
             <div id="work_area">
                 <div id="numbers">{side_numbers()}</div>
-                {/* <Print_data_files file={state} /> */}
+                <Print_data_files file={apps} />
             </div>
         </div>
     )

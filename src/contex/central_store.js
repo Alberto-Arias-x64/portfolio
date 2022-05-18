@@ -114,7 +114,7 @@ const app_slice = createSlice({
         add_first_app: (state, action) => {
             return [{
                 ...action.payload,
-                is_active: false,
+                is_active: true,
                 is_hide: false
             }]
         },
@@ -125,7 +125,24 @@ const app_slice = createSlice({
                 is_hide: false
             })
         },
-        hide_app: (state,action) => {
+        active_app: (state, action) => {
+            return state.map(element => {
+                if (action.payload.name === element.name) {
+                    const new_active = {
+                        ...element,
+                        is_active: true,
+                        is_hide: false
+                    }
+                    return new_active
+                }
+                return {
+                    ...element,
+                    is_active: false
+                }
+            }
+            )
+        },
+        hide_app: (state, action) => {
             return state.map(element => {
                 if (action.payload.name === element.name) {
                     const nuevo = {
@@ -140,10 +157,11 @@ const app_slice = createSlice({
         }
     }
 })
-export const { add_first_app, add_app, hide_app } = app_slice.actions
+export const { add_first_app, add_app, active_app, hide_app } = app_slice.actions
 
 export const central_store = configureStore({
     reducer: {
         apps: app_slice.reducer
-    }
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}),
 })

@@ -1,12 +1,14 @@
-import { file_extencion } from "../helpers/icons"
+import { file_extencion } from '../helpers/icons'
 import { useSelector, useDispatch } from 'react-redux'
+
+import { active_app } from '../contex/central_store'
 
 const View_panel = () => {
     const {apps} = useSelector((state) => state)
     const dispatch = useDispatch()
     
     const handle_active = (target,element) => {
-        //active_item(element)
+        dispatch(active_app(element))
     }
 
     function print_files(file = []) {

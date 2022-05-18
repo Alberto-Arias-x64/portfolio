@@ -12,7 +12,7 @@ import Data from './components/raw_data'
 import About from './components/raw_data/about'
 import Projects from './components/raw_data/proyects'
 
-const f = [
+const info = [
   {
     name: 'Intro.html',
     data: <Data />,
@@ -37,7 +37,7 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    f.forEach((element, index) => {
+    info.forEach((element, index) => {
       if (index === 0) dispatch(add_first_app(element))
       else dispatch(add_app(element))
     })
