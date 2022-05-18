@@ -1,7 +1,7 @@
-import { createContext, useReducer } from "react"
+/* import { createContext, useReducer } from "react"
 
 
-const initial_state = []
+const initial_state = [] */
 /* {
     name: '',
     contend: false,
@@ -9,7 +9,7 @@ const initial_state = []
     is_hide: false
 } */
 
-const reducer = (state, action) => {
+/* const reducer = (state, action) => {
     const { type, payload } = action
     switch (type) {
         case '@item/add_item':
@@ -98,4 +98,52 @@ export const Store = ({ children }) => {
             {children}
         </Context.Provider>
     )
-}
+} */
+
+import { configureStore, createSlice } from "@reduxjs/toolkit"
+
+const app_slice = createSlice({
+    name: 'apps',
+    initialState: [{
+        name: '',
+        contend: false,
+        is_active: false,
+        is_hide: false
+    }],
+    reducers: {
+        add_first_app: (state, action) => {
+            return [{
+                ...action.payload,
+                is_active: false,
+                is_hide: false
+            }]
+        },
+        add_app: (state, action) => {
+            state.push({
+                ...action.payload,
+                is_active: false,
+                is_hide: false
+            })
+        },
+        hide_app: (state,action) => {
+            return state.map(element => {
+                if (action.payload.name === element.name) {
+                    const nuevo = {
+                        ...element,
+                        is_active: false,
+                        is_hide: true
+                    }
+                    return nuevo
+                }
+                return element
+            })
+        }
+    }
+})
+export const { add_first_app, add_app, hide_app } = app_slice.actions
+
+export const central_store = configureStore({
+    reducer: {
+        apps: app_slice.reducer
+    }
+})

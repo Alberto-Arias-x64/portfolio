@@ -1,6 +1,7 @@
-import { useContext, useEffect } from 'react'
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 
-import { Context } from './contex/store'
+import { add_first_app, add_app } from './contex/central_store'
 
 import Control_panel from './components/apps_panel'
 import View_panel from './components/explorer_panel'
@@ -14,15 +15,16 @@ import Projects from './components/raw_data/proyects'
 const f = [
   {
     name: 'Intro.html',
-    data: <Data/>
+    data: <Data />,
+    write: false
   },
   {
     name: 'About.js',
-    data: <About/>
+    data: <About />
   },
   {
     name: 'Projects.git',
-    data: <Projects/>
+    data: <Projects />
   },
   {
     name: 'Galery.py',
@@ -31,10 +33,13 @@ const f = [
 ]
 
 function App() {
-  const { add_item } = useContext(Context)
+  const { apps } = useSelector((state) => state)
+  const dispatch = useDispatch()
+
   useEffect(() => {
-    f.map(element => {
-      add_item(element)
+    f.forEach((element, index) => {
+      if (index === 0) dispatch(add_first_app(element))
+      else dispatch(add_app(element))
     })
   }, [])
 

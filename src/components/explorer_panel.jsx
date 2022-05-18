@@ -1,12 +1,12 @@
-import { useContext} from "react"
 import { file_extencion } from "../helpers/icons"
-import { Context } from "../contex/store"
+import { useSelector, useDispatch } from 'react-redux'
 
 const View_panel = () => {
-    const {state,active_item} = useContext(Context)
+    const {apps} = useSelector((state) => state)
+    const dispatch = useDispatch()
     
     const handle_active = (target,element) => {
-        active_item(element)
+        //active_item(element)
     }
 
     function print_files(file = []) {
@@ -26,7 +26,7 @@ const View_panel = () => {
             <div className="folder">
                 <div className="folder_title"><p>˅</p><p className="bold">PORTFOLIO</p></div>
                 <div className="folder_contend">
-                    <ul>{print_files(state)}</ul>
+                    <ul>{print_files(apps)}</ul>
                 </div>
             </div>
         </div>

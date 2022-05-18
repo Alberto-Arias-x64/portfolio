@@ -42,10 +42,34 @@ const matrix = () => {
     }
     setInterval(draw, 40)
 }
+const write_machine = (text, target) => {
+    let array = text.split('')
+    let count = 0
+    let inter = setInterval(() => {
+        target.innerHTML += array[count]
+        count++
+        if (count === array.length) clearInterval(inter)
+    }, 100)
+}
 
 const Data = () => {
     useEffect(() => {
         matrix()
+        const callback = function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) observer.unobserve(entry.target)
+                write_machine('HI, I’m Alberto Arias | Web developer', entry.target)
+            })
+        }
+        const options = {
+            root: document.querySelector('#intro'),
+            rootMargin: '0px',
+            threshold: 1.0
+        }
+        const observer = new IntersectionObserver(callback, options)
+        const target = document.querySelector('.write_machine')
+        observer.observe(target)
+
     }, []);
     return (
         <section id="intro">
@@ -53,7 +77,7 @@ const Data = () => {
             <div id='intro_contend'>
                 <div id='intro_data'>
                     <div>
-                        <h1>HI, I’m Alberto Arias | Web developer</h1>
+                        <h1 className='write_machine'></h1>
                         <p className='up'>I like explore new tecnologies  ‍💻 I´m livelong learner ‍🎓 and lover of music, art and designe 🎨</p>
                     </div>
                     <img src={simio} alt="" />

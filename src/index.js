@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import {Store} from './contex/store';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
+
+import './index.css'
+import App from './App'
+import { central_store } from './contex/central_store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Store>
-      <App />
-    </Store>
-  </React.StrictMode>
+  <Provider store={central_store}>
+    <App />
+  </Provider>
 )

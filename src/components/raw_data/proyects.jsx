@@ -96,7 +96,7 @@ const Card = (data) => {
     const [click,set_click] = useState('')
 
     function tecno(params) {
-        return params.map(element => <p>{element}</p>)
+        return params.map(element => <p key={element}>{element}</p>)
     }
     const redir = (url) => {
         if (url !== '') window.open(url, '_blank')
@@ -109,7 +109,7 @@ const Card = (data) => {
         redir(click)
     }, [click]);
     return (
-        <div className="card">
+        <div key={data.name} className="card">
             <div className='card_up'>
                 <div className="card_title"><h4>{data.name}</h4></div>
                 <button data-link={data.link} onClick={handle_click}>See Now</button>
