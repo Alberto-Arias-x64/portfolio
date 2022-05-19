@@ -11,6 +11,7 @@ import Information from './components/information_button'
 import Data from './components/raw_data'
 import About from './components/raw_data/about'
 import Projects from './components/raw_data/proyects'
+import Masters from './components/raw_data/masters'
 
 const info = [
   {
@@ -27,8 +28,8 @@ const info = [
     data: <Projects />
   },
   {
-    name: 'Galery.py',
-    data: false
+    name: 'My_Masters.py',
+    data: <Masters/>
   }
 ]
 

@@ -59,6 +59,10 @@ button{
   border: var(--blue_1) 1px solid;
   border-radius: 5px;
 }
+p{
+  text-align: justify;
+}
+
 .hide_element{
   display: none !important;
 }
@@ -451,4 +455,34 @@ main {
 .card_img{
   height: 220px;
   border-radius: 5px;
+}
+
+
+#master_grid{
+  width: 100%;
+  height: calc(100vh - 30px - 18px );
+  padding: 20px;
+
+  overflow-y: auto;
+
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+  gap: 15px;
+}
+.master_card{
+  height: auto;
+  max-width: 400px;
+  padding: 10px;
+
+  border-radius: 5px;
+  background-color: var(--gray_1);
+}
+.master_card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.master_card > img{
+  width: 100%;
+  border-radius: 50%;
 }
