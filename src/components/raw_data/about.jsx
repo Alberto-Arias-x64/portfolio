@@ -28,11 +28,7 @@ const About = () => {
                         <div>
                             <h4>A touch of my 🖌️</h4>
                             <p>
-                                Since I was a child I disassembled everything that had electronics, when I turned 16 years old I bought my first computer,
-                                with this computer I learned to design my first 3d models and then it allowed me to start in the world of programming,
-                                this experience pushed me to study engineering in industrial automation.
-                                thanks to the pandemic I have focused on software development for the web,
-                                studying on my own and doing projects and learning day by day.
+                                I love programming and everything related to the internet and new technologies, when I turned 16 years old I bought my first computer, with this computer I learned to design my first 3d models and then allowed me to get started in the world of programming, this experience pushed me to study industrial automation engineering. During the pandemic I have focused on improving my professional career in software development for the web, I'm almost completely self-taught, doing projects and improving day by day.
                             </p>
                         </div>
                     </div>

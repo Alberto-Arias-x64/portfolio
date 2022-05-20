@@ -48,6 +48,16 @@ h4{
   font-weight: 500;
   color: var(--icon_2);
 }
+h5{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--icon_2);
+}
+h6{
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--icon_1);
+}
 ul {
   list-style: none;
 }
@@ -440,6 +450,10 @@ main {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
+.card_description{
+  display: grid;
+  grid-template-rows: auto min-content;
+}
 .tecno_persent{
   color: var(--numbers);
 }
@@ -466,13 +480,13 @@ main {
   overflow-y: auto;
 
   display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+  grid-auto-rows: minmax(250px, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 15px;
 }
 .master_card{
   height: auto;
-  max-width: 400px;
+  max-width: 250px;
   padding: 10px;
 
   border-radius: 5px;

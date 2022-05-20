@@ -8,7 +8,7 @@ const data = [
     {
         name: '🎓 Portfolio V3',
         graph: img_pj1,
-        tecnologis: ['React','Jsx', 'Js', 'Css', 'Html'],
+        tecnologis: ['React','Jsx', 'Js', 'Css', 'Html','Redux'],
         description: 'Welcome to my portfolio, this is a project to show who I am and what knowledge I am acquiring over time, this includes my experience, personal projects, something about me, and a little gratitude to all my mentors along to my technological career.',
         data: {
             develop_time: '18 Days',
@@ -117,7 +117,7 @@ const Card = (data) => {
             <div className="card_contend">
                 <img className='card_img' src={data.graph} alt="" />
                 <div className="card_description">
-                    {data.description}
+                    <div>{data.description}</div>
                     <div id="skills">
                         {tecno(data.tecnologis)}
                     </div>

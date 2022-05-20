@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const masters = [
     {
         nick: 'Midudev',
@@ -6,6 +8,14 @@ const masters = [
         social: 'https://midu.dev/',
         description: 'Software Engineer GitHub Star 🌟 Google Developer Expert 👨‍💻',
         tecs: ['JavaScrit', 'React', 'Typescrit']
+    },
+    {
+        nick: 'Programador X',
+        name: 'Xavier Reyes Ochoa',
+        img: 'https://media-exp1.licdn.com/dms/image/C5603AQGx_SlyqWElYQ/profile-displayphoto-shrink_800_800/0/1546925429730?e=1658361600&v=beta&t=Cn-XtzBwLF1_MHdD5IShY2BapAAEps2cYMaxCirBkjw',
+        social: 'https://www.academia-x.com',
+        description: 'Frontend Engineer at Amazon',
+        tecs: ['Professional growing']
     },
     {
         nick: 'Hola Mundo',
@@ -114,13 +124,21 @@ const masters = [
 ]
 
 const Master_card = ({ info }) => {
+    const [hover_item,set_hover_item] = useState('')    
+
+    const teck = (teck=[]) => {
+        return teck.map(element => <p key={element}>{element}</p>)
+    }
     const card = (data) => {
         return data.map(element => { return(
-            <div className="master_card">
-                <h4>{element.nick}</h4>
+            <div key={element.nick} className="master_card" onMouseOver={() => set_hover_item(element.name)} onMouseLeave={() => set_hover_item('')}>
                 <h5>{element.name}</h5>
+                <h6>{element.nick}</h6>
                 <img src={element.img} alt="imagen" />
-                <p>{element.description}</p>
+                <p className={hover_item === element.name ? '':'hide_element'}>{element.description}</p>
+                <div id="skills" className={hover_item === element.name ? '':'hide_element'}>
+                    {teck(element.tecs)}
+                </div>
             </div>
         )})
     }
