@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const masters = [
     {
         nick: 'Midudev',
@@ -12,7 +10,7 @@ const masters = [
     {
         nick: 'Programador X',
         name: 'Xavier Reyes Ochoa',
-        img: 'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2147839398/settings_images/F5R8yTlSJmhaw532yNYM_file.jpg',
+        img: 'https://pbs.twimg.com/profile_images/1315033149055758336/hp-R2W_A_400x400.jpg',
         social: 'https://www.academia-x.com',
         description: 'Frontend Engineer at Amazon',
         tecs: ['Professional growing']
@@ -20,7 +18,7 @@ const masters = [
     {
         nick: 'Hola Mundo',
         name: 'Nicolas Schurmann',
-        img: 'https://yt3.ggpht.com/Z69fhRL9_OaXsDz-XsCUe2sGIqU7G1F5Mwl0PwlBsx_ll13K0nLb47q7_RMen7NHvzMVDgd2=s88-c-k-c0x00ffffff-no-rj',
+        img: 'https://pbs.twimg.com/profile_images/1497701062991437824/evabz349_400x400.jpg',
         social: 'https://www.nicolas-schurmann.com',
         description: 'Hago videos, música y creo cursos.',
         tecs: ['HTML', 'CSS', 'Professional growing']
@@ -28,7 +26,7 @@ const masters = [
     {
         nick: 'Victor Robles WEB',
         name: 'Víctor Robles',
-        img: 'https://yt3.ggpht.com/ytc/AKedOLSfiETwDHzMxdgkF7dcqWjlQygdzJ2JyVj3u0o3Jw=s88-c-k-c0x00ffffff-no-rj',
+        img: 'https://pbs.twimg.com/profile_images/714360954507669504/N3RZeyjE_400x400.jpg',
         social: 'https://victorroblesweb.es/academy/',
         description: 'Soy desarrollador web, blogger técnico, formador online y también técnico superior en Administración de sistemas informáticos en red (ASIR).',
         tecs: ['JavaScrit', 'Python', 'Professional growing']
@@ -36,7 +34,7 @@ const masters = [
     {
         nick: 'Fazt',
         name: 'Fazttech',
-        img: 'https://yt3.ggpht.com/ytc/AKedOLSggvA4usmC3lIDdqORkmsje78sxwaSPsQ3gefNYw=s88-c-k-c0x00ffffff-no-rj',
+        img: 'https://pbs.twimg.com/profile_images/1403545185624203264/B80aezHw_400x400.jpg',
         social: 'https://www.faztweb.com',
         description: "I'm Fazt. and in this Channel you can FInd Everything about Programmig, Web Development. From doing your own Brand Logo to upload your site and aplicattion to the web, with the best practices.",
         tecs: ['JavaScrit', 'React', 'Python']
@@ -52,7 +50,7 @@ const masters = [
     {
         nick: 'pildorasinformaticas',
         name: 'Juan Díaz',
-        img: 'https://yt3.ggpht.com/ytc/AKedOLSmCOW8jpsP2NlIU0KekcExsSteZLYsXLBP1Uvv=s88-c-k-c0x00ffffff-no-rj',
+        img: 'https://pbs.twimg.com/profile_images/1447659190869180420/BDyEUuik_400x400.jpg',
         social: 'https://www.pildorasinformaticas.es',
         description: '🧑🏻‍💻Te enseñamos todo lo que necesitas saber sobre informática.',
         tecs: ['Python', 'Django', 'SQL']
@@ -60,7 +58,7 @@ const masters = [
     {
         nick: 'freddier',
         name: 'Freddy Vega',
-        img: 'https://pbs.twimg.com/profile_images/1496885672627556362/jkvPwUuT_400x400.jpg',
+        img: 'https://freddyvega.com/content/images/2020/08/freddy-vega-2.jpg',
         social: 'https://freddyvega.com',
         description: 'Experto en Educación en línea. Cofundador y CEO de Platzi.',
         tecs: ['Professional growing', 'Git/Github']
@@ -68,7 +66,7 @@ const masters = [
     {
         nick: 'facmartoni',
         name: 'Facundo García Martoni',
-        img: 'https://pbs.twimg.com/profile_images/1507496532899254283/0oHSR0Pd_400x400.jpg',
+        img: 'https://d3v0px0pttie1i.cloudfront.net/uploads/user/avatar/4624216/ac34f065.jpg',
         social: 'https://calendly.com/facmartoni',
         description: '👨🏼‍💻 Tech Creator  || 🕹️ Streamer || 🏋️‍♂️ Weightlifter || 🎖️ Army || 🥋 Kaizen',
         tecs: ['Python']
@@ -124,7 +122,10 @@ const masters = [
 ]
 
 const Master_card = ({ info }) => {
-    const [hover_item, set_hover_item] = useState('')
+    const redir = ({target}) => {
+        //console.log(target.dataset.link)
+        window.open(target.dataset.link, '_blank')
+    }
 
     const teck = (teck = []) => {
         return teck.map(element => <p key={element}>{element}</p>)
@@ -132,15 +133,15 @@ const Master_card = ({ info }) => {
     const card = (data) => {
         return data.map(element => {
             return (
-                <div key={element.nick} className="master_card" onMouseOver={() => set_hover_item(element.name)} onMouseLeave={() => set_hover_item('')}>
-                    <img src={element.img} alt="imagen" />
-                    <div className='master_card_data'>
-                        <div>
-                            <h5>{element.name}</h5>
-                            <h6>{element.nick}</h6>
-                            <p>{element.description}</p>
+                <div key={element.nick} className="master_card" data-link={element.social} onClick={redir}>
+                    <img data-link={element.social}  src={element.img} alt="imagen" />
+                    <div data-link={element.social}  className='master_card_data'>
+                        <div data-link={element.social} >
+                            <h5 data-link={element.social} >{element.name}</h5>
+                            <h6 data-link={element.social} >{element.nick}</h6>
+                            <p data-link={element.social} >{element.description}</p>
                         </div>
-                        <div className='master_card_tecs'>
+                        <div data-link={element.social}  className='master_card_tecs'>
                             {teck(element.tecs)}
                         </div>
                     </div>

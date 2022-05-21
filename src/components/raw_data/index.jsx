@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import simio from './Group_4.png'
 
 const matrix = () => {
@@ -42,23 +42,30 @@ const matrix = () => {
     }
     setInterval(draw, 40)
 }
-const write_machine = (text, target) => {
-    let array = text.split('')
-    let count = 0
-    let inter = setInterval(() => {
-        target.innerHTML += array[count]
-        count++
-        if (count === array.length) clearInterval(inter)
-    }, 80)
-}
 
 const Data = () => {
+
+    const [pulse,set_pulse] = useState(false)
+
+    const write_machine = (text, target) => {
+        let array = text.split('')
+        let count = 0
+        let inter = setInterval(() => {
+            target.innerHTML += array[count]
+            count++
+            if (count === array.length){
+                clearInterval(inter)
+                set_pulse(true)
+            }
+        }, 80)
+    }
+
     useEffect(() => {
         matrix()
         const callback = function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) observer.unobserve(entry.target)
-                write_machine('HI, I’m Alberto Arias | Web developer', entry.target)
+                write_machine('HI, I’m Alberto Arias | Web Developer', entry.target)
             })
         }
         const options = {
@@ -77,7 +84,7 @@ const Data = () => {
             <div id='intro_contend'>
                 <div id='intro_data'>
                     <div>
-                        <h1 className='write_machine'></h1>
+                        <h1 className={pulse ? 'pulse': 'write_machine'}></h1>
                         <p className='up'>I like explore new tecnologies  ‍💻 I´m livelong learner ‍🎓 and lover of music, art and designe 🎨</p>
                     </div>
                     <img src={simio} alt="" />

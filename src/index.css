@@ -1,5 +1,6 @@
 :root {
   --blue_1: #007acc;
+  --blue_1_T: #007acc27;
   --gray_1: #333333;  /* side panel */
   --gray_2: #252526;  /* Explorador */
   --gray_2_1: #2a2d2e;  /* preselected item */
@@ -21,6 +22,19 @@
   --numbers: #6B6B6B;
 }
 
+html::-webkit-scrollbar {
+  width: 20px; 
+}
+
+html::-webkit-scrollbar-track {
+background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+background: #4e4e4e;
+border-radius: 25px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,28 +47,45 @@ body {
 }
 h1{
   font-size: 48px;
+  position: relative;
+}
+.pulse::before{
+  background: linear-gradient(90deg, #007CF0, #00DFD8);
+  content: 'HI, I’m Alberto Arias | Web Developer';
+  position: absolute;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate_h1 9s infinite;
+}
+@keyframes animate_h1 {
+  0%, 100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
 }
 h2{
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 200;
   color: var(--text_2);
   white-space: pre-wrap;
 }
 h3{
-  font-size: 38px;
+  font-size: 30px;
 }
 h4{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--icon_2);
 }
 h5{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--icon_2);
 }
 h6{
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--icon_1);
 }
@@ -62,12 +93,22 @@ ul {
   list-style: none;
 }
 button{
-  width: max-content  ;
-  padding: 10px;
+  width: max-content;
+  padding: 10px 15px;
+  margin: 10px;
   color: var(--blue_1);
-  background-color: var(--gray_3);
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  background-color: transparent;
   border: var(--blue_1) 1px solid;
   border-radius: 5px;
+}
+button:hover{
+  cursor: pointer;
+  background-color: var(--blue_1_T);
+  transition: 200ms ease-in-out;
 }
 p{
   text-align: justify;
@@ -341,47 +382,86 @@ main {
   font-size: 1rem;
 }
 
-
+#about_container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 #about_contend{
   width: fit-content;
-  height: 100%;
+  height: fit-content;  
+  margin: 0 10%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  justify-content: center;  
 
-  margin: 0 10%;
+  background-color: var(--gray_1);
+  border-radius: 5px;
   font-size: 1rem;
+}
+#about_data_img > h3{
+  margin-bottom: 10px;
 }
 #about_data{
   display: grid;
   height: fit-content;
   grid-template-columns: auto auto;
   align-items: center;
-  gap: 20px;
 }
-#about_data > img{
+#about_data_img{
+  margin-left: 20px;
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+}
+#about_data_img > img{
   max-height: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+#about_data_img > button{
+  width: 100%;
+  margin: 10px 0;
 }
 #about_data_contend{
-  max-width: 700px;
+  max-width: 800px;
 
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 20px;
 }
 #skills > *{
   display: inline-block;
   margin: 4px;
-  padding: 8px;
+  padding: 5px 10px;
 
-  color: var(--text_4);
-  background-color: var(--icon_2);
+
+  color: var(--icon_2);
+  border-radius: 20px;
+  background-color: var(--purple_1);
   font-weight: 800;
 }
+#table{
+  width: 100%;
+  padding: 10px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  background-color: var(--gray_3);
+  border-radius: 5px;
+}
+#table > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.horizontal_center{
+  width: 100%;
+  border-top: 1px solid var(--gray_2_2);
+  border-bottom: 1px solid var(--gray_2_2);
+}
 
 #projects{
   height: 100%;
@@ -390,64 +470,43 @@ main {
 }
 #intro_contend_2{
   height: calc(100vh - 18px - 30px - 52px - 52px);
-  display: grid;
-  grid-auto-columns: auto;
-  justify-content: center;
-  gap: 20px;
+  width: 100%;
+  padding: 20px;
+
   overflow-y: auto;
+
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 15px;
 }
 
-
 .card{
-  max-width: 900px;
+  max-width: 400px;
   display: grid;
-  grid-template-rows: 2fr 3fr 1fr;
+  grid-template-rows: 60px auto auto 60px;
   margin: 5px;
 
   border-radius: 5px;
   background-color: var(--gray_1);
-  gap: 10px;
-}
-.card_up{
-  display: grid;
-  grid-template-columns: auto max-content;
-  gap: 10px;
-}
-.card_up > button{
-  font-size: 1.2rem;
-  padding: 0 50px;
-}
-.card_up > button:hover{
-  cursor: pointer;
-  background-color: var(--blue_1);
-  color: var(--gray_1);
-  border-color: var(--gray_1) ;
-  transition: 200ms ease-in-out;
 }
 .card_title{
-  padding: 5px;
-  border-radius: 5px;
-  background-color: var(--purple_1);
+  padding: 15px;
 }
 .card_contend{
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
-.card_tecnologis, .card_description, .card_data{
+.card_description, .card_datas{
   padding: 10px;
+}
+.card_datas{
+  width: fit-content;
+  margin: 0 auto;
+
   border-radius: 5px;
   background-color: var(--gray_3);
-}
-.card_tecnologis{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  gap: 10px;
-
-  font-size: 1.1rem;
-  text-transform: uppercase;
 }
 .card_description{
   display: grid;
@@ -455,6 +514,12 @@ main {
 }
 .tecno_persent{
   color: var(--numbers);
+}
+.card_datas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
 }
 .card_data{
   display: flex;
@@ -466,8 +531,7 @@ main {
   font-weight: bold;
 }
 .card_img{
-  height: 100%;
-  border-radius: 5px 5px 0 0;
+  width: 100%;
 }
 
 
@@ -488,7 +552,7 @@ main {
   max-width: 400px;
 
   display: grid;
-  grid-template-rows: 3fr 4fr;
+  grid-template-rows: 4fr 5fr;
   overflow: hidden;
 
   border-radius: 5px;
@@ -496,6 +560,7 @@ main {
 }
 .master_card:hover{
   cursor: pointer;
+  transform: scale(1.05);
 }
 .master_card > img{
   width: 100%;
@@ -522,5 +587,5 @@ main {
   background: var(--gray_2);
   border-radius: 20px;
 
-  word-wrap: unset;
+  white-space: nowrap;
 }
