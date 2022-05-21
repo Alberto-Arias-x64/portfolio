@@ -110,12 +110,12 @@ const Card = (data) => {
     }, [click]);
     return (
         <div key={data.name} className="card">
+            <img className='card_img' src={data.graph} alt="project" />
             <div className='card_up'>
                 <div className="card_title"><h4>{data.name}</h4></div>
                 <button data-link={data.link} onClick={handle_click}>See Now</button>
             </div>
             <div className="card_contend">
-                <img className='card_img' src={data.graph} alt="" />
                 <div className="card_description">
                     <div>{data.description}</div>
                     <div id="skills">
