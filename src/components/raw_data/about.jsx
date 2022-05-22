@@ -14,16 +14,16 @@ const About = () => {
                         </div>
                         <div id='about_data_contend'>
                             <div id="skills">
-                                <p>Javascipt</p>
-                                <p>Python</p>
-                                <p>Typescript</p>
-                                <p>C++</p>
-                                <p>React</p>
-                                <p>NodeJs</p>
                                 <p>Wordpress</p>
                                 <p>Html</p>
                                 <p>Css</p>
+                                <p>Javascipt</p>
+                                <p>React</p>
+                                <p>Python</p>
+                                <p>NodeJs</p>
                                 <p>MySql</p>
+                                <p>Typescript</p>
+                                <p>C++</p>
                                 <p>Figma</p>
                                 <p>Photoshop</p>
                                 <p>Fusion 360</p>

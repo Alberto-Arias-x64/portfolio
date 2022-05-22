@@ -1,6 +1,7 @@
 :root {
   --blue_1: #007acc;
   --blue_1_T: #007acc27;
+  --blue_2: #318ecc; /* Hover blue */
   --gray_1: #333333;  /* side panel */
   --gray_2: #252526;  /* Explorador */
   --gray_2_1: #2a2d2e;  /* preselected item */
@@ -22,17 +23,25 @@
   --numbers: #6B6B6B;
 }
 
-html::-webkit-scrollbar {
-  width: 20px; 
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray_3) var(--gray_1);
 }
 
-html::-webkit-scrollbar-track {
-background-color: black;
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
 }
 
-html::-webkit-scrollbar-thumb {
-background: #4e4e4e;
-border-radius: 25px;
+*::-webkit-scrollbar-track {
+  background: var(--gray_1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--gray_3);
+  border-radius: 20px;
+  border: 2px solid var(--gray_1);
 }
 
 * {
@@ -163,6 +172,12 @@ main {
 }
 
 
+#control_grid{
+  display: grid;
+  grid-template-rows: auto min-content;
+
+  background-color: var(--gray_1);
+}
 #control {
   width: 100%;
   height: 100%;
@@ -170,8 +185,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  background-color: var(--gray_1);
 }
 .app{
   width: 100%;
@@ -189,6 +202,7 @@ main {
 }
 .control_icon:hover {
   stroke: var(--icon_2);
+  transition: 200ms;
 }
 .control_icon_especial{
   display: flex;
@@ -201,6 +215,7 @@ main {
 }
 .control_icon_especial:hover{
   fill: var(--icon_2);
+  transition: 200ms;
 }
 .active_app{
   stroke: var(--icon_2);
@@ -346,6 +361,15 @@ main {
   flex-direction: row;
   align-items: center;
 }
+.bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom:hover{
+  background-color: var(--blue_2);
+  cursor: pointer;
+}
 
 /* raw data */
 
@@ -401,6 +425,8 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
+
+  position: relative;
 }
 #about_contend{
   width: fit-content;
@@ -571,6 +597,7 @@ main {
 .master_card:hover{
   cursor: pointer;
   transform: scale(1.05);
+  transition: 500ms;
 }
 .master_card > img{
   width: 100%;

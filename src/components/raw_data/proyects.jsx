@@ -23,7 +23,7 @@ const data = [
     {
         name: '🎓 Portfolio V3',
         graph: img.pj1,
-        tecnologis: ['React', 'Jsx', 'Js', 'Css', 'Html', 'Redux', 'Versel'],
+        tecnologis: ['Html','Css','Js','React', 'Jsx', 'Css','Redux', 'Versel'],
         description: 'Welcome to my portfolio, this is a project to show who I am and what knowledge I am acquiring over time, this includes my experience, personal projects, something about me, and a little gratitude to all my mentors along to my technological career.',
         data: {
             develop_time: '21 Days',
@@ -35,7 +35,7 @@ const data = [
     {
         name: '🎓 Portfolio V2 (Reload)',
         graph: img.pj2,
-        tecnologis: ['Js', 'Css', 'Html'],
+        tecnologis: ['Html','Css','Js'],
         description: 'Welcome to my portfolio, this is a project to show who I am and what knowledge I am acquiring over time, this includes my experience, personal projects, something about me, and a little gratitude to all my mentors along to my technological career.',
         data: {
             develop_time: '2 Days',
@@ -47,7 +47,7 @@ const data = [
     {
         name: '🔞 Note app',
         graph: img.pj3,
-        tecnologis: ['React', 'Jsx', 'Js', 'Css', 'Html', 'Node', 'Express', 'Express validator', 'JWT', 'Socketio', 'Mysql'],
+        tecnologis: ['Html','Css','React', 'Js', 'Jsx' , 'Node', 'Express', 'Express validator', 'JWT', 'Socketio', 'Mysql','Heroku'],
         description: 'This is the presentation of the final project of the full stack boocam of Midudev which consists of an app to post messages on a public board.',
         data: {
             develop_time: '2 Months',
@@ -57,26 +57,26 @@ const data = [
         link: 'https://note-app-x64.herokuapp.com'
     },
     {
-        name: '🔑 Password manager',
-        graph: img.pj4,
-        tecnologis: ['Django', 'Python', 'Html', 'Css', 'Js', 'Mysql'],
-        description: 'This is the presentation of the final project of the full stack boocam of pildorasinformaticas which consists of an application for encrypted storage of web site passwords.',
-        data: {
-            develop_time: '3 Months',
-            contribuidors: 2,
-            project_status: 'In Github'
-        },
-        link: 'https://github.com/Alberto-Arias-x64/Password_manager'
-    },
-    {
         name: '🏪 Tu pieza 3D (3D Froger)',
         graph: img.pj5,
-        tecnologis: ['React', 'Jsx', 'Js', 'Css', 'Html', 'Node', 'Express', 'Express-sesion', 'JavaScript', 'MySql'],
+        tecnologis: ['Html', 'Css', 'Node', 'Express', 'Express-sesion', 'JavaScript', 'MySql'],
         description: 'Personal project to increase the visibility of my 3D products',
         data: {
             develop_time: '3 Months',
             contribuidors: 1,
             project_status: 'In DEV'
+        },
+        link: 'https://github.com/Alberto-Arias-x64/3D_Froger'
+    },
+    {
+        name: '🔑 Password manager',
+        graph: img.pj4,
+        tecnologis: ['Html', 'Css', 'Js','Django', 'Python', 'Mysql'],
+        description: 'This is the presentation of the final project of the full stack boocam of pildorasinformaticas which consists of an application for encrypted storage of web site passwords.',
+        data: {
+            develop_time: '3 Months',
+            contribuidors: 2,
+            project_status: 'In Github'
         },
         link: 'https://github.com/Alberto-Arias-x64/Password_manager'
     },
