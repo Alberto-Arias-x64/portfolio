@@ -24,11 +24,11 @@ const info = [
     data: <About />
   },
   {
-    name: 'Projects.git',
+    name: 'Projects.py',
     data: <Projects />
   },
   {
-    name: 'My_Masters.py',
+    name: 'My_Masters.git',
     data: <Masters/>
   }
 ]

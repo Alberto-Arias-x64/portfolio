@@ -17,12 +17,17 @@ const Work_area = () => {
     }
 
     function Print_files({ file }) {
+        const handle_class = (element) =>{
+            if (element.is_active === true) return 'windows_active'
+            if (element.is_hide === true)  return 'hide_element'
+            return ''
+        }
         return file.map(element => {
             return (
-                <div key={element.name} className={element.is_hide === true ? 'hide_element' : null} onClick={({ target }) => handle_active(target, element)} >
+                <div key={element.name} className={handle_class(element)} onClick={({ target }) => handle_active(target, element)} >
                     <img data-name={element.name} src={file_extencion(element.name)} alt="" className="folder_icon" />
                     <p data-name={element.name}>{element.name}</p>
-                    <button data-hide_name={element.name} className="windows_button" onClick={({ target }) => handle_hide(target, element)}>X</button>
+                    <button data-hide_name={element.name} className="windows_button" onClick={({ target }) => handle_hide(target, element)}>x</button>
                 </div>
             )
         })
@@ -42,13 +47,21 @@ const Work_area = () => {
         })
     }
     const [dimensions, set_dimensions] = useState(0)
+    const [resize, set_resize] = useState(0)
+
+    useEffect(() =>{
+        window.addEventListener("resize", function(){
+            set_resize(Math.random())
+        })
+    },[])
+
     useEffect(() => {
         try {
             const side_numbers = document.documentElement.clientHeight
             const num_rows = (side_numbers - 55) / 20
             set_dimensions(num_rows)
         } catch (error) { }
-    }, [apps, document.documentElement.clientHeight]);
+    }, [apps, document.documentElement.clientHeight, resize]);
 
     return (
         <div id="work">

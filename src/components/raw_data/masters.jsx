@@ -122,7 +122,7 @@ const masters = [
 ]
 
 const Master_card = ({ info }) => {
-    const redir = ({target}) => {
+    const redir = ({ target }) => {
         //console.log(target.dataset.link)
         window.open(target.dataset.link, '_blank')
     }
@@ -134,14 +134,14 @@ const Master_card = ({ info }) => {
         return data.map(element => {
             return (
                 <div key={element.nick} className="master_card" data-link={element.social} onClick={redir}>
-                    <img data-link={element.social}  src={element.img} alt="imagen" />
-                    <div data-link={element.social}  className='master_card_data'>
+                    <img data-link={element.social} src={element.img} alt="imagen" />
+                    <div data-link={element.social} className='master_card_data'>
                         <div data-link={element.social} >
                             <h5 data-link={element.social} >{element.name}</h5>
                             <h6 data-link={element.social} >{element.nick}</h6>
                             <p data-link={element.social} >{element.description}</p>
                         </div>
-                        <div data-link={element.social}  className='master_card_tecs'>
+                        <div data-link={element.social} className='master_card_tecs'>
                             {teck(element.tecs)}
                         </div>
                     </div>
@@ -154,8 +154,11 @@ const Master_card = ({ info }) => {
 
 const Masters = () => {
     return (
-        <section id="master_grid">
-            <Master_card info={masters} />
+        <section>
+            <div className="f_row"> <h2 className="simbol">~$</h2><h2>Git</h2> <h2 className="function">commit</h2> <h2 className="simbol">-m</h2> <h2 className="commentary">"Hello World!"</h2></div>
+            <div id="master_grid">
+                <Master_card info={masters} />
+            </div>
         </section>
     )
 }
