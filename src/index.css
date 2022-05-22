@@ -120,7 +120,7 @@ p{
 .f_row{
   display: flex !important;
   flex-direction: row;
-  gap: 20px;
+  gap: 18px;
 }
 .f_col{
   display: flex;
@@ -332,7 +332,7 @@ main {
   color: var(--icon_2);
 }
 #information_left > *, #information_rigt > *{
-  margin: 0 10px;
+  margin: 0 8px;
 }
 #information_rigt{
   display: flex;
