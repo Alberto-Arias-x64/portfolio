@@ -6,7 +6,7 @@ import { add_first_app, add_app } from './contex/central_store'
 import Control_panel from './components/apps_panel'
 import View_panel from './components/explorer_panel'
 import Work_area from './components/work_area'
-import Information from './components/information_button'
+import Information from './components/information_bottom'
 
 import Data from './components/raw_data'
 import About from './components/raw_data/about'

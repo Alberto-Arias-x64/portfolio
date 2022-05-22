@@ -118,7 +118,7 @@ p{
   display: none !important;
 }
 .f_row{
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   gap: 20px;
 }
@@ -266,6 +266,7 @@ main {
   align-items: center;
   margin-right: 1px;
   padding: 15px;
+  padding-right: 0;
 
   background-color: var(--gray_3_1);
   cursor: pointer;
@@ -330,13 +331,20 @@ main {
   width: 100%;
   color: var(--icon_2);
 }
-#information_left >*, #information_rigt > *{
-  display: inline-block;
-  margin-left: 10px;
+#information_left > *, #information_rigt > *{
+  margin: 0 10px;
 }
 #information_rigt{
   display: flex;
   justify-content: flex-end;
+}
+.info_float{
+  width: fit-content;
+  gap: 2px  ;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* raw data */
