@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { motion } from 'framer-motion'
 
 import { active_app, hide_app } from '../contex/central_store'
 import { file_extencion } from '../helpers/icons'
@@ -42,7 +43,7 @@ const Work_area = () => {
     const Print_data_files = ({ file }) => {
         return file.map(element => {
             if (element.is_active === true) return (
-                <div key={element} id="contend">{element.data}</div>
+                <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:1}} key={element} id="contend">{element.data}</motion.div>
             )
         })
     }

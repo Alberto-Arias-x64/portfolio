@@ -1,51 +1,58 @@
-import { useEffect,useState } from 'react'
-import simio from './Group_4.png'
+import { useEffect, useState } from 'react'
 
-const matrix = () => {
-    const canvas = document.getElementById('matrix')
-    const context = canvas.getContext('2d')
+const Icons_list = () => {
+    return (
+        <div>
+            <i className="fa-solid fa-code"></i>
+            <i className="fa-solid fa-code-branch"></i>
+            <i className="fa-brands fa-css3"></i>
+            <i className="fa-brands fa-free-code-camp"></i>
+            <i className="fa-solid fa-bath"></i>
+            <i className="fa-solid fa-mug-saucer"></i>
+            <i className="fa-solid fa-microchip"></i>
+            <i className="fa-solid fa-gears"></i>
+            <i className="fa-solid fa-shield-halved"></i>
+            <i className="fa-brands fa-node-js"></i>
+            <i className="fa-solid fa-store"></i>
+            <i className="fa-solid fa-network-wired"></i>
+            <i className="fa-solid fa-keyboard"></i>
+            <i className="fa-solid fa-folder"></i>
+            <i className="fa-solid fa-bug"></i>
+            <i className="fa-solid fa-file-lines"></i>
+            <i className="fa-solid fa-terminal"></i>
+            <i className="fa-solid fa-laptop-code"></i>
+            <i className="fa-solid fa-gamepad"></i>
+            <i className="fa-solid fa-camera"></i>
+            <i className="fa-solid fa-database"></i>
+            <i className="fa-solid fa-mobile-screen-button"></i>
+        </div>
+    )
+}
 
-    const style = getComputedStyle(canvas)
-
-    canvas.width = parseInt(style.width)
-    canvas.heigth = parseInt(style.height)
-
-    const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン'
-    const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    const nums = '0123456789'
-    const aplhabet = katakana + latin + nums
-
-    const font_size = 8
-    const columns = canvas.width / font_size
-
-    const rain_drops = []
-    for (let index = 0; index < columns; index++) {
-        rain_drops[index] = 1
+const Matrix_icon = () => {
+    const Row = () => {
+        return (
+            <div className="icon_row">
+                <Icons_list />
+                <Icons_list />
+                <Icons_list />
+            </div>
+        )
     }
-
-    const draw = () => {
-        context.fillStyle = 'rgba(30, 30, 30, 0.2)'
-        context.fillRect(0, 0, canvas.width, canvas.height)
-
-        context.fillStyle = '#0F0'
-        context.font = font_size + 'px monospace'
-
-        for (let index = 0; index < rain_drops.length; index++) {
-            const text = aplhabet.charAt(Math.floor(Math.random() * aplhabet.length))
-            context.fillText(text, index * font_size, rain_drops[index] * font_size)
-
-            if (rain_drops[index] * font_size > canvas.heigth && Math.random() > 0.975) {
-                rain_drops[index] = 0
-            }
-            rain_drops[index]++
-        }
+    let Rows = []
+    for (let index = 0; index < 20; index++) {
+        Rows.push(<Row key={Math.random()}/>)
     }
-    setInterval(draw, 40)
+    return (
+        <section className='icon_seccion'>
+            {Rows}
+        </section>
+    )
 }
 
 const Data = () => {
 
-    const [pulse,set_pulse] = useState(false)
+    const [pulse, set_pulse] = useState(false)
 
     const write_machine = (text, target) => {
         let array = text.split('')
@@ -53,7 +60,7 @@ const Data = () => {
         let inter = setInterval(() => {
             target.innerHTML += array[count]
             count++
-            if (count === array.length){
+            if (count === array.length) {
                 clearInterval(inter)
                 set_pulse(true)
             }
@@ -61,7 +68,6 @@ const Data = () => {
     }
 
     useEffect(() => {
-        matrix()
         const callback = function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) observer.unobserve(entry.target)
@@ -84,13 +90,12 @@ const Data = () => {
             <div id='intro_contend'>
                 <div id='intro_data'>
                     <div>
-                        <h1 className={pulse ? 'pulse': 'write_machine'}></h1>
+                        <h1 className={pulse ? 'pulse' : 'write_machine'}></h1>
                         <p className='up'>I like explore new tecnologies  ‍💻 I´m livelong learner ‍🎓 and lover of music, art and designe 🎨</p>
                     </div>
-                    <img src={simio} alt="" />
                 </div>
-                <div id='matrix_placeholder'>
-                    <canvas id="matrix"></canvas>
+                <div id='icon_placeholder'>
+                    <Matrix_icon />
                 </div>
             </div>
             <div className='f_row'><h2 className='simbol'>{'</'}</h2><h2>Title</h2><h2 className='simbol'>{'>'}</h2></div>
