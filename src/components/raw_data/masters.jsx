@@ -1,3 +1,5 @@
+import { useState,useEffect } from "react"
+import { motion } from "framer-motion"
 const masters = [
     {
         nick: 'Midudev',
@@ -122,6 +124,7 @@ const masters = [
 ]
 
 const Master_card = ({ info }) => {
+    const [charge,set_charge] = useState(false)
     const redir = ({ target }) => {
         //console.log(target.dataset.link)
         window.open(target.dataset.link, '_blank')
@@ -130,10 +133,18 @@ const Master_card = ({ info }) => {
     const teck = (teck = []) => {
         return teck.map(element => <p key={element}>{element}</p>)
     }
+
+    useEffect(() => {
+        setTimeout(()=>{
+            set_charge(true)
+        },3000)
+    },[])
     const card = (data) => {
+        let delay = 0
         return data.map(element => {
+            delay += 0.2
             return (
-                <div key={element.nick} className="master_card" data-link={element.social} onClick={redir}>
+                <motion.div initial={{y:-200, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:charge?0:0.5+delay, velocity:charge?0.5:2}} whileHover={{scale:1.05}} key={element.nick} className="master_card" data-link={element.social} onClick={redir}>
                     <img data-link={element.social} src={element.img} alt="imagen" />
                     <div data-link={element.social} className='master_card_data'>
                         <div data-link={element.social} >
@@ -145,7 +156,7 @@ const Master_card = ({ info }) => {
                             {teck(element.tecs)}
                         </div>
                     </div>
-                </div>
+                </motion.div>
             )
         })
     }

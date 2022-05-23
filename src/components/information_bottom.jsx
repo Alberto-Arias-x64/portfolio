@@ -15,12 +15,12 @@ const Information = () => {
         }, 60000);
     }, []);
     return (
-        <div id="information_button" className='f_row'>
+        <div id="information_button">
             <div id="information_left" className='info_float'>
-                <div className='info_float bottom'><Branch st={icon_style} /><p>master*</p></div>
-                <div className="bottom"><Sync st={{ height: 'auto', width: '1.8ch' }} /></div>
+                <div className='info_float bottom '><Branch st={icon_style} /><p>master*</p></div>
+                <div className="bottom ups"><Sync st={{ height: 'auto', width: '1.8ch' }} /></div>
                 <div className='info_float bottom'><Error st={{ height: 'auto', width: '1.8ch' }} /><p>0</p><Alert st={{ height: 'auto', width: '1.6ch' }} /><p>0</p></div>
-                <div className="bottom"><Debug st={icon_style} /></div>
+                <div className="bottom ups"><Debug st={icon_style} /></div>
                 <p className='bottom'>Git Graph</p>
                 <div className="info_float bottom"><Time st={{ height: 'auto', width: '1.9ch' }} /><p>{timer} mins</p></div>
             </div>

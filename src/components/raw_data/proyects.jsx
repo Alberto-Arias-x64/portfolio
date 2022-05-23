@@ -205,7 +205,8 @@ const Projects = () => {
         cards_img.forEach(element => observer.observe(element))
     }, [])
     useEffect(() =>{
-        set_change(!change)
+        set_change(true)
+        set_change(false)
     },[img_br])
 
     return (
