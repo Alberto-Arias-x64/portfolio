@@ -742,19 +742,31 @@ p {
   }
   #intro_contend_2 {
     height: 100%;
-    max-width: 350px;
+    max-width: 400px;
     padding: 10px;
   
   }
   .card {
     max-width: 350px;
-    min-width: 210px;
+    min-width: 220px;
     display: grid;
     grid-template-rows: 60px auto auto 60px;
-  
+    
     border-radius: 5px;
     background-color: var(--gray_1);
     user-select: none;
+  }
+  @media (min-width: 420px) {
+    .card {
+      max-width: 350px;
+      min-width: 260px;
+      display: grid;
+      grid-template-rows: 60px auto auto 60px;
+    
+      border-radius: 5px;
+      background-color: var(--gray_1);
+      user-select: none;
+    }
   }
   .card_title {
     padding: 8px;
@@ -802,7 +814,7 @@ p {
   }
   .swiper{
     width: 100%;
-    left: -20px;
+    left: -62px;
   }
   #project_img_bg{
     height: 100%;
