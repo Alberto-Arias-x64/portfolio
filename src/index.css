@@ -886,6 +886,9 @@ p {
   
     white-space: nowrap;
   }
+  #masters > .f_row > h2{
+    font-size: 1rem;
+  }
 }
 
 /* tablet */

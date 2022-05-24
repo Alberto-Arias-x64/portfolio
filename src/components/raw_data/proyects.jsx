@@ -41,18 +41,6 @@ const data = [
         link: 'https://portfolio-chi-seven-37.vercel.app/'
     },
     {
-        name: '🎓 Portfolio V2 (Reload)',
-        graph: img.pj2,
-        tecnologis: ['Html', 'Css', 'Js'],
-        description: 'Welcome to my portfolio, this is a project to show who I am and what knowledge I am acquiring over time, this includes my experience, personal projects, something about me, and a little gratitude to all my mentors along to my technological career.',
-        data: {
-            develop_time: '2 Days',
-            contribuidors: 1,
-            project_status: 'Online'
-        },
-        link: 'https://alberto-arias-x64.github.io/Pagina-web/'
-    },
-    {
         name: '🔞 Note app',
         graph: img.pj3,
         tecnologis: ['Html', 'Css', 'React', 'Js', 'Jsx', 'Node', 'Express', 'Express validator', 'JWT', 'Socketio', 'Mysql', 'Heroku'],
@@ -77,6 +65,18 @@ const data = [
         link: 'https://github.com/Alberto-Arias-x64/3D_Froger'
     },
     {
+        name: '🎓 Portfolio V2 (Reload)',
+        graph: img.pj2,
+        tecnologis: ['Html', 'Css', 'Js'],
+        description: 'Is a light version of my current portfolio for better accounting with browsers.',
+        data: {
+            develop_time: '2 Days',
+            contribuidors: 1,
+            project_status: 'Online'
+        },
+        link: 'https://alberto-arias-x64.github.io/Pagina-web/'
+    },
+    {
         name: '🔑 Password manager',
         graph: img.pj4,
         tecnologis: ['Html', 'Css', 'Js', 'Django', 'Python', 'Mysql'],
@@ -89,18 +89,6 @@ const data = [
         link: 'https://github.com/Alberto-Arias-x64/Password_manager'
     },
     {
-        name: '🔥 Rapid Fire',
-        graph: img.pj6,
-        tecnologis: ['Python'],
-        description: 'Python script to shoot at a higher speed than any human can reach',
-        data: {
-            develop_time: '1 Day',
-            contribuidors: 1,
-            project_status: 'To download'
-        },
-        link: 'https://github.com/Alberto-Arias-x64/Rapid_fire'
-    },
-    {
         name: '📧 Live app message',
         graph: img.pj7,
         tecnologis: ['React', 'Jsx', 'Js', 'Css', 'Html', 'Node', 'Express', 'HTTP', 'Socket IO'],
@@ -111,6 +99,18 @@ const data = [
             project_status: 'In Github'
         },
         link: 'https://github.com/Alberto-Arias-x64/Simple_message_app'
+    },
+    {
+        name: '🔥 Rapid Fire',
+        graph: img.pj6,
+        tecnologis: ['Python'],
+        description: 'Python script to shoot at a higher speed than any human can reach',
+        data: {
+            develop_time: '1 Day',
+            contribuidors: 1,
+            project_status: 'To download'
+        },
+        link: 'https://github.com/Alberto-Arias-x64/Rapid_fire'
     },
     {
         name: '⚙️ Temperature monitor',

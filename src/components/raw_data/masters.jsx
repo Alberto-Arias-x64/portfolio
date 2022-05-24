@@ -165,7 +165,7 @@ const Master_card = ({ info }) => {
 
 const Masters = () => {
     return (
-        <section>
+        <section id="masters">
             <div className="f_row"> <h2 className="simbol">~$</h2><h2>Git</h2> <h2 className="function">commit</h2> <h2 className="simbol">-m</h2> <h2 className="commentary">"Hello World!"</h2></div>
             <div id="master_grid">
                 <Master_card info={masters} />
