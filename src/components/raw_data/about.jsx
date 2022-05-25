@@ -58,7 +58,7 @@ const About = () => {
                         <div id='about_data_img'>
                             <h3>My skills</h3>
                             <img src={imagen} alt="alberto_arias_x64" />
-                            <button> See my resumen</button>
+                            <button onClick={() => window.open('https://drive.google.com/file/d/1894WsCmCQczVxnmx7xEwi3LWheEQq2Lt/view', '_blank')}> See my resumen</button>
                         </div>
                         <div id='about_data_contend'>
                             <div id="skills">
