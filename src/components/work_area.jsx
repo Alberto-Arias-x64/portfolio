@@ -59,6 +59,10 @@ const Work_area = () => {
     useEffect(() => {
         try {
             const side_numbers = document.documentElement.clientHeight
+            const width = document.documentElement.clientWidth
+            if (width <= 426){
+                window.location.replace("https://alberto-arias-x64.github.io/Pagina-web/");   
+            }
             const num_rows = (side_numbers - 55) / 20
             set_dimensions(num_rows)
         } catch (error) { }
