@@ -2,6 +2,22 @@ import { useState,useEffect } from "react"
 import { motion } from "framer-motion"
 const masters = [
     {
+        nick: 'Nicobites',
+        name: 'Nicolas Molina',
+        img: 'https://avatars.githubusercontent.com/u/7611944?v=4',
+        social: 'https://nicobytes.com',
+        description: 'Software Senior Developer and Teacher at Platzi. With more than 8 years of professional software development experience focusing in Web Development',
+        tecs: ['Angular']
+    },
+    {
+        nick: 'Serudda',
+        name: 'Sergio Ruiz',
+        img: 'https://pbs.twimg.com/profile_images/1645933911514681345/zrDbFWCT_400x400.jpg',
+        social: 'https://midu.dev/',
+        description: 'Trying to be the SENIOR, I needed when I was a JUNIOR.',
+        tecs: ['Professional growing']
+    },
+    {
         nick: 'Midudev',
         name: 'Miguel Ángel Durán',
         img: 'https://avatars.githubusercontent.com/u/1561955?v=4',
@@ -12,7 +28,7 @@ const masters = [
     {
         nick: 'Programador X',
         name: 'Xavier Reyes Ochoa',
-        img: 'https://pbs.twimg.com/profile_images/1315033149055758336/hp-R2W_A_400x400.jpg',
+        img: 'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2147839398/settings_images/F5R8yTlSJmhaw532yNYM_file.jpg',
         social: 'https://www.academia-x.com',
         description: 'Frontend Engineer at Amazon',
         tecs: ['Professional growing']
@@ -20,7 +36,7 @@ const masters = [
     {
         nick: 'Hola Mundo',
         name: 'Nicolas Schurmann',
-        img: 'https://pbs.twimg.com/profile_images/1497701062991437824/evabz349_400x400.jpg',
+        img: 'https://media.licdn.com/dms/image/D5603AQEvM-ZZFtoJow/profile-displayphoto-shrink_800_800/0/1669322515805?e=1692230400&v=beta&t=ftoMxrlB6N-AJddoGJnKf0Y_b5EN4xDgABEJt9o47-Y',
         social: 'https://www.nicolas-schurmann.com',
         description: 'Hago videos, música y creo cursos.',
         tecs: ['HTML', 'CSS', 'Professional growing']
@@ -36,7 +52,7 @@ const masters = [
     {
         nick: 'Fazt',
         name: 'Fazttech',
-        img: 'https://pbs.twimg.com/profile_images/1403545185624203264/B80aezHw_400x400.jpg',
+        img: 'https://scontent-bog1-1.xx.fbcdn.net/v/t39.30808-6/309346251_525873402678992_6153854648696045735_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CfbI64S-w40AX9Xn32X&_nc_ht=scontent-bog1-1.xx&oh=00_AfDrQWQJAwfXTciPWIeol-ztEk04X-m1PfHDBpqqY9evAQ&oe=6491C15A',
         social: 'https://www.faztweb.com',
         description: "I'm Fazt. and in this Channel you can FInd Everything about Programmig, Web Development. From doing your own Brand Logo to upload your site and aplicattion to the web, with the best practices.",
         tecs: ['JavaScrit', 'React', 'Python']

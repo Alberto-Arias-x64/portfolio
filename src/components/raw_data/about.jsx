@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import imagen from '../../svg/imagen.jpeg'
+import imagen from '../../svg/photo.jpg'
 
 const matrix = () => {
     const canvas = document.getElementById('matrix')
