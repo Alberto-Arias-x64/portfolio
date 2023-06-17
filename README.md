@@ -63,4 +63,4 @@ Start the server
 
 ## Screenshots
 
-![App Screenshot](http://drive.google.com/uc?export=view&id=1x08wbEOS8dlwyw4xF31qmjDEW5IVSeV4)
+![App Screenshot](http://drive.google.com/uc?export=view&id=1HwtdWC-ComBGqcNIWLUOgor-IYHH-U1k)
